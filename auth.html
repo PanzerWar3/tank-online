@@ -63,7 +63,7 @@ document.getElementById("submit").onclick=function(){
 var name = document.getElementById("name").value;
 var password = document.getElement("password").value;
 var date = new Date();
-firebase.database().ref("rooms").push().set({
+firebase.database().ref("users").push().set({
             "name":name,
 			"password":password,
 			"date",date
