@@ -54,9 +54,17 @@ var owner = localStorage.getItem("name");
 firebase.database().ref(title+" room").push().set({
             "title": title,
             "owner": owner,
-			"players":0,
+			"players":1,
 			"max":10
 			
+        });
+		firebase.database().ref(title+" player").push().set({
+            "playerName":owner,
+			"x":0,
+			"y":0,
+			"rotate":0,
+			"kills":0,
+			"hp":100
         });
 		document.getElementById("center").innerHTML +="<br><div class='dialog'><center><font color='white'>Загружаем данные</font></center></div>";
 	setTimeout(()=>document.location.href="game",3000);
