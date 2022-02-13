@@ -27,6 +27,11 @@ button{
 #panel{
 margin:10px;
 }
+.dialog{
+background:black;
+border:1px solid gray;
+margin:-10px;
+}
 </style>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
@@ -37,7 +42,7 @@ margin:10px;
 <script src ='cd.js'>
 
 </script>
-<center>
+<center id = "center">
 <div id ="panel">
 <input id = 'title' placeholder ="Впишите название комнаты"><button id = 'submit'>create</button>
 </center>
@@ -53,7 +58,8 @@ firebase.database().ref(title+" room").push().set({
 			"max":10
 			
         });
-	
+		document.getElementById("center").innerHTML +="<br><div class='dialog'><center><font color='white'>Загружаем данные</font></center></div>";
+	setTimeout(()=>document.location.href="game",3000);
 		}
 </script>
 </body>
