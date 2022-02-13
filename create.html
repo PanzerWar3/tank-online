@@ -30,9 +30,18 @@ button{
 </head>
 <body>
 <center>
-<input id = 'title' ><button id = 'submit'>create</button>
+<input id = 'title' placeholder ="Впишите название комнаты"><button id = 'submit'>create</button>
 </center>
 <script>
-var title = 
+var title = document.getElementById("title").value;
+var owner = localStorage.getItem("name");
+firebase.database().ref(title+" room").push().set({
+            "title": title,
+            "owner": owner,
+			"players":0
+			"max":10
+			
+        });
+		document.location.href = "game";
 </script>
 </body>
