@@ -66,7 +66,7 @@ var date = new Date();
 firebase.database().ref("users").push().set({
             "name":name,
 			"password":password,
-			"date",date
+			"date"date
 			
         });
 		setTimeout(()=>document.location.href="index.html",2000);
