@@ -1,8 +1,6 @@
 <html>
 <head>
-<script src ='cd.js'>
 
-</script>
 <title>
 Создание комнаты
 </title>
@@ -33,10 +31,14 @@ button{
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
 </head>
 <body>
+<script src ='cd.js'>
+
+</script>
 <center>
 <input id = 'title' placeholder ="Впишите название комнаты"><button id = 'submit'>create</button>
 </center>
 <script>
+document.getElementById("submit").onclick-function(){
 var title = document.getElementById("title").value;
 var owner = localStorage.getItem("name");
 firebase.database().ref(title+" room").push().set({
@@ -47,5 +49,6 @@ firebase.database().ref(title+" room").push().set({
 			
         });
 		document.location.href = "game";
+		}
 </script>
 </body>
