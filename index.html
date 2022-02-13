@@ -38,6 +38,7 @@ button:hover{
 color:white;
 }
 </style>
+
 </head>
 
 <body style ="">
@@ -54,7 +55,10 @@ color:white;
 </div>
 </center>
 <script>
-
+if(localStorage.getItem("name")==null && localStorage.getItem("name")=="")
+{
+document.location.href="auth.html";
+}
 </script>
 </body>
 </html>
