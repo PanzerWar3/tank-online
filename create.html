@@ -43,7 +43,7 @@ margin:10px;
 </center>
 </div>
 <script>
-document.getElementById("submit").onclick-function(){
+document.getElementById("submit").onclick=function(){
 var title = document.getElementById("title").value;
 var owner = localStorage.getItem("name");
 firebase.database().ref(title+" room").push().set({
