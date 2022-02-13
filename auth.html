@@ -56,4 +56,18 @@ border-radius:5px;
 
 </div>
 </center>
+<script>
+document.getElementById("submit").onclick=function(){
+var name = document.getElementById("name").value;
+var password = document.getElement("password").value;
+var date = new Date();
+firebase.database().ref("rooms").push().set({
+            "name":name,
+			"password":password,
+			"date",date
+			
+        });
+		setTimeout(()=>document.location.href="index.html",2000);
+};
+</script>
 </body>
