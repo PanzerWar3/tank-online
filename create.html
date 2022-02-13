@@ -51,7 +51,7 @@ margin:-10px;
 document.getElementById("submit").onclick=function(){
 var title = document.getElementById("title").value;
 var owner = localStorage.getItem("name");
-firebase.database().ref(title+" room").push().set({
+firebase.database().ref("rooms").push().set({
             "title": title,
             "owner": owner,
 			"players":1,
