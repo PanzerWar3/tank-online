@@ -44,7 +44,7 @@ var owner = localStorage.getItem("name");
 firebase.database().ref(title+" room").push().set({
             "title": title,
             "owner": owner,
-			"players":0
+			"players":0,
 			"max":10
 			
         });
